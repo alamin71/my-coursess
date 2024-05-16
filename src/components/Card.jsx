@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 const Card = ({card}) => {
     const {imageLink, courseName, courseDetails, priceValue, creditValue} = card;
     return (
-        <div>
-            <img src={imageLink} alt="" />
+        <div className='bg-white px-3 py-3'>
+            <img className='min-w-full' src={imageLink} alt="" />
             <h1 className='text-2xl'>{ courseName}</h1>
             <p>{courseDetails}</p>
-            <div className='flex space-x-24'>
+            <div className='flex space-x-28 text-xl'>
                 <div>
                     <p>price:{priceValue}</p>
                 </div>
