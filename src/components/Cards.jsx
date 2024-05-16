@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Card from "./Card";
 
 
 const Cards = () => {
@@ -14,6 +15,9 @@ const Cards = () => {
     return (
         <div className="md:w-2/3">
             <h2>Cards:{cards.length}</h2>
+            {
+                cards.map(card=><Card key={card.id} card={card}></Card>)
+            }
         </div>
     );
 };
