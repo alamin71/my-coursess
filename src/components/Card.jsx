@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react';
 
 const Card = ({card}) => {
+    const[carts, setCarts]=useState([]);
+    const handleClikedSelectBtn=(card)=>{
+        console.log(carts)
+        const newclick = [...carts, card]
+        setCarts(newclick);
+    }
+
     const {imageLink, courseName, courseDetails, priceValue, creditValue} = card;
     return (
         <div className='bg-white px-3 py-3'>
@@ -16,7 +24,7 @@ const Card = ({card}) => {
 
                 </div>
             </div>
-            <button className='text-white bg-blue-700 px-32 py-2 rounded-lg'>Select</button>
+            <button onClick={()=>handleClikedSelectBtn(card)} className='bg-blue-600 w-72 text-white hover:bg-black rounded-lg py-2'>Select</button>
         </div>
     );
 };
