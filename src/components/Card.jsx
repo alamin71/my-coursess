@@ -16,6 +16,7 @@ const Card = ({card}) => {
 
                 </div>
             </div>
+            <button className='text-white bg-blue-700 px-32 py-2 rounded-lg'>Select</button>
         </div>
     );
 };
