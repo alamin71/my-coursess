@@ -3,6 +3,7 @@ import { useState } from "react";
 import Card from "./Card";
 
 
+
 const Cards = () => {
     const [cards, setCards] = useState([])
     useEffect(()=>{
@@ -14,10 +15,14 @@ const Cards = () => {
 
     return (
         <div className="md:w-2/3">
-            <h2>Cards:{cards.length}</h2>
+            <div>
+                <h1 className="text-center text-4xl mt-4">Course Registration</h1>
+            </div>
+            <div className="grid grid-cols-3 gap-5 mt-5 pl-3 px-3 text-justify">
             {
                 cards.map(card=><Card key={card.id} card={card}></Card>)
             }
+        </div>
         </div>
     );
 };
